@@ -13,10 +13,6 @@ function palindrome(str) {
       if(tmp[i]!='_')
         result.push(tmp[i]);
     }
-
-
-
-    console.log(result);
     result=result.map(myFunction);
     let first=result.join(''); 
     let temp=first;

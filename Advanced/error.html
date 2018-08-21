@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Click the button!</h1>
+    <button onclick="myFunc()">ClickMe!</button>
+    <script type="text/javascript">
+        /* function myFunc()
+        {
+            var a=100;
+            var b=0;
+            try {
+                if(b==0)
+                    throw ("Divide by zero!");
+                else
+                    alert(a/b);
+            } catch (error) {
+                alert(error);
+            }
+            finally{
+                alert("Divider!");
+            }
+        } */
+        window.onerror=function(msg,url,line){
+            alert('Mesage: '+msg);
+            alert("URL: "+url);
+            alert("Line: "+line);
+        }
+    </script>
+</body>
+</html>
