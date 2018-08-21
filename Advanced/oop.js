@@ -20,4 +20,13 @@ console.log(collageOOP);
 console.log(collageOP);
 collageOOP.ShowName();
 
+//Dot vs Brackets
+console.log(collageOOP.level);
+console.log(collageOOP['level']);
+
+//Delete
+collageOOP.grade=10;
+console.log(collageOOP.grade);
+delete collageOOP.grade;
+console.log(collageOOP.grade);
 
