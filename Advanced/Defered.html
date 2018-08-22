@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="web.css" rel="stylesheet"/>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="message">Message:</label>
+        <input type="text" id="message" class="form-control"/>
+        <button type="button" id="send-message" class="btn">Send message!</button>
+    </div>
+
+    <div>
+        <ul id="message-list">Results:</ul>
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="Defered_Client.js"></script>
+    <script>
+        $(function(){
+            $('#send-message').click(function(){
+                var message=$('#message').val();
+                //Call
+                var promise=processMessage(message);
+                //When you ar done,update UI
+                promise.done(function(data){
+                    $('#message-list').append('<li>'+data+'</li>');
+                })
+            });
+        });
+    </script>
+
+</body>
+</html>

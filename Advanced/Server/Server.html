@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <div>
+            <label for="message">Message:</label>
+            <input type="text" id="message" class="form-control"/>
+            <button type="button" id="load-data" class="btn">Load Data</button>
+    </div>
+    
+    <div>
+            <ul id="message-list">Results:</ul>
+    </div>
+        
+
+    <div id="output"></div>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script>
+        //XMLHttp
+        /* $('#load-data').click(function(){
+            var xhr=new XMLHttpRequest();
+
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4 && xhr.status==200)
+                {
+                    var data=xhr.responseText;
+                    $('#output').text(data);
+                }
+            }
+            xhr.open('GET','./demo.txt');
+            xhr.send();
+        });     */
+        
+        //jQuery and Ajax
+         $('#load-data').click(function(){
+            $.get('./demo.txt').done(function(data){
+                $('#output').text(data);
+            });
+        });
+
+        //WebSockets
+        /* $('#load-data').click(function(){
+            var socket=new WebSocket('ws://localhost:49439/Server.html');
+            socket.onmessage=function(e){
+                $('#message-list').append('<li>'+e.data+'</li>');
+            }
+            
+            socket.onopen=function(){
+                socket.send($('#message').val());
+            }
+
+        }); */
+    </script>
+
+</body>
+</html>
