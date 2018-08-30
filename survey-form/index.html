@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Form</title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body class="fluid-container">
+
+  <div id="survey" class="fluid-container">
+  <h1 id="title">Simple Taxi Survay</h1>
+ 
+  <form id="survey-form">
+    <table class="table table-bordered">
+      <thead>
+        <tr class="success">
+          <th colsnap="2">
+           <p id="description">Simple Taxi Form for new Taxi users</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td><label class="lables" id="name-label">* Name</label></td>
+          <td><input type="text" required placeholder="Name" id="name" /></td>
+        </tr>
+        
+        <tr>
+          <td><label class="lables" id="email-label">* Email</label></td>
+          <td><input type="email" required placeholder="Email" id="email" /></td>
+        </tr>
+        
+        <tr>
+          <td><label class="lables" id="number-label">* Age</label></td>
+          <td><input type="number" required placeholder="Age" id="number" min="10" max="99"/></td>
+        </tr>
+        
+        <tr>
+          <td><label class="lables" id="dd-label">* Type-of-User</label></td>
+          <td>
+             <select id="dropdown" name="currentPos" class="dropdown">
+              <option disabled value selected>Select an option</option>
+              <option  value="student">Driver</option>
+              <option value="job">Client</option>
+            </select>
+          </td>
+        </tr>
+        
+        <tr>
+          <td><label class="lables" id="r-label">Main Location</label></td>  
+          <td>
+            <ul sytle:"list-style:none">
+              <li class="radio"><input type="radio" value="1"  name="radio-btn" class="radio-btn"/>Beograd</li>
+              <li class="radio"><input type="radio" value="2"  name="radio-btn" class="radio-btn"/>Novi Sad</li>
+              <li class="radio"><input type="radio" value="3"  name="radio-btn" class="radio-btn"/>Nis</li>
+              <li class="radio"><input type="radio" value="4"  name="radio-btn" class="radio-btn"/>Kragujevac</li>
+              <li class="radio"><input type="radio" value="5"  name="radio-btn" class="radio-btn"/>Valjevo</li>
+            </ul>
+          </td>
+        </tr>
+        
+        <tr>
+          <td><label class="lables" id="r-label">Type of Vehicle</label></td>  
+          <td>
+            <ul sytle:"list-style:none">
+              <li class="checkbox"><input type="checkbox" value="1"  name="cb-btn" class="cb-btn"/>Car</li>
+              <li class="checkbox"><input type="checkbox" value="2"  name="cb-btn" class="cb-btn"/>MiniVan</li>
+              <li class="checkbox"><input type="checkbox" value="3"  name="cb-btn" class="cb-btn"/>Var</li>
+              <li class="checkbox"><input type="checkbox" value="4"  name="cb-btn" class="cb-btn"/>Truck</li>
+            </ul>
+          </td>
+        </tr>
+        
+         <tr>
+          <td><label class="lables" id="additional-info-label">Additional Info</label></td>
+          <td><textarea id="comments" class="input-field" style="height:80px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea></td>
+        </tr>
+        
+        <tr class="success">
+           <td colspan="2">
+             <button id="submit" class="btn btn-primary lables">Sign In !</button>
+           </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</div>
+</body>
+
+</html>

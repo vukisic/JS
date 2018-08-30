@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Tammudu');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+html,body{
+  background-color:#003368;  
+}
+
+#survey-form tr:hover {background-color: #ddd;}
+
+#survey{
+  border-radius:10px;
+  background-color:	#dfd3c3;
+  margin-top:100px;
+  margin-left:50px;
+  margin-right:50px;
+  margin-bottom:50px;
+  padding: 10px 10px 10px 10px;
+}
+
+h1,p{
+  text-align:center;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.lables{
+  font-family: 'Baloo Tammudu', cursive;
+  font-size:20px;
+  text-align:center;
+}
+
+#submit{
+  position:relative;
+  text-align:center;
+  float:center;
+  width:20vmax;
+  height:3vh;
+  color:white;
+}
+
+li{
+  padding: 2px 2px 0 0;
+  font-family: 'Source Code Pro', monospace;
+}
